@@ -9,7 +9,7 @@ const boxesDiv = document.querySelector('#boxes');
 
 const createBoxes = amount => {
   const toAddEl = [];
-  for (let i = 0; i <= amount; i++){
+  for (let i = 0; i < amount; i++){
     const div = document.createElement('div');
     div.style.height = `${30 + 10 * i}px`;
     div.style.width = `${30 + 10 * i}px`;

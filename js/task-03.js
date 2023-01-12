@@ -15,10 +15,13 @@ const images = [
 
 const ulList = document.querySelector('.gallery');
 
-images.forEach(image => {
-  ulList.insertAdjacentHTML(
-    'beforeEnd', `<li><img src="${image.url}" alt="${image.alt}"></li>`);
-});
+const imagesArr = images
+	.map(image => `<li><img class="picture" src=${image.url}  alt='${image.alt}'></img></li>`)
+	.join('');
+
+ulList.insertAdjacentHTML('beforeend', imagesArr);
+      
+
 
 console.log(ulList);
 
